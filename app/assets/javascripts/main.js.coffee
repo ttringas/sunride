@@ -8,3 +8,15 @@ $ ->
   $('.step').hide()
   $('#step1').show()
   
+  $('.step_button').on 'click', ->
+    next_step = $(this).attr('data-step')
+    console.log(next_step)
+    $('.step').hide()
+    $(next_step).show()
+    false
+    
+  $('#driving_icons a').on 'click', ->
+    miles = $(this).data('miles')
+    $('input#miles_year').val(miles)
+    false
+    
