@@ -22,5 +22,5 @@ $ ->
 
   $.getJSON 'http://www.solarlistapi.com/api/cars.json', (data) ->
     console.log(data)
-    $(data).each (i, el)->
+    $(data).each (i, el) ->
       $('select#vehicle_type').append("<option value="#{el.id}">#{el.car_model}</option>")
