@@ -19,13 +19,8 @@ $ ->
     miles = $(this).data('miles')
     $('input#miles_year').val(miles)
     false
-  
-  car_options = []
 
-  getCarOptions = ->
-    $.getJSON 'http://www.solarlistapi.com/api/cars.json', (data) ->
-      console.log(data)
-      $(data).each (i, el)->
-        $('select#vehicle_type').append("<option value="#{el.id}">#{el.car_model}</option>")
-  
-  getCarOptions()
+  $.getJSON 'http://www.solarlistapi.com/api/cars.json', (data) ->
+    console.log(data)
+    $(data).each (i, el)->
+      $('select#vehicle_type').append("<option value="#{el.id}">#{el.car_model}</option>")
