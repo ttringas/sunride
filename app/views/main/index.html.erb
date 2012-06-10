@@ -12,7 +12,7 @@
 
   <div id="step2" class="step driving_type" style="display:none;">
     <h3>Tell us about your driving habits</h3>
-    <div id="driving_icons">
+    <div id="driving_icons" class="clearfix">
       <div class="driving_icon">
         <a href="#" data-miles="7500"><%= image_tag("driving_light.png") %></a>
       </div>
@@ -41,12 +41,15 @@
     <select name="vehicle_type" id="vehicle_type">
     </select>
   
-    <div class="controls"><button class="btn btn-primary step_button" data-step="#step4">Next &raquo;</button></div>
+    <div class="controls"><button class="btn btn-primary step_button get_calc_button" data-step="#step4">Next &raquo;</button></div>
   </div><!-- step3 -->
 
   <div id="step4" class="step outputs" style="display:none;">
     <h3>Your report
     <div id="graphs">
+      <div id="graph_1">
+        
+      </div>
     
     </div>
     <div id="options" class="controls">
